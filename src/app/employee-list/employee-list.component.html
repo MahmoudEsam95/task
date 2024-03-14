@@ -1,0 +1,42 @@
+<table class="table table-striped justify-content-center col-md-8">  <!--justify-center-->
+  <thead >
+    <tr>
+      <th class="col-md-1"></th>
+
+      <th scope="col">ID</th>
+
+      <th scope="col">Username</th>
+
+      <th scope="col">Salary</th>
+
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeeData">
+      <th></th>
+
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.username }}</td>
+      <td>{{ employee.salary }}</td>
+      <td>
+        <div class="action-buttons">
+          <button type="button" class="btn btn-danger" (click)="deleteEmployee(employee.id)">
+            <i class="fa-solid fa-trash "></i> Delete
+          </button>
+          <button type="button" class="btn btn-primary" [routerLink]="['/edit', employee.id]">
+            <i class="fa-solid fa-pen-to-square"></i> Edit
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br><br>
+
+<button type="button" id="ty" class="btn btn-success col-md-2" [routerLink]="['/list/add']" >Add Employee</button>
+<br>
+<br>
+<br>
+<br>

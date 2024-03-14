@@ -1,0 +1,21 @@
+<form (ngSubmit)="editEmployee(empId, newEmployeeData1)" class="needs-validation " novalidate>
+  <div class="form-group col-md-4  ">
+    <label for="id">ID:</label>
+    <input type="number" class="form-control" id="id" name="id" [(ngModel)]="newEmployeeData1.id" required>
+
+  </div>
+  <div class="form-group col-md-4">
+    <label for="username">Username:</label>
+    <input type="text" class="form-control" id="username" name="username" [(ngModel)]="newEmployeeData1.username" required>
+
+  </div>
+  <div class="form-group col-md-4">
+    <label for="salary">Salary:</label>
+    <input type="number" class="form-control" id="salary" name="salary" [(ngModel)]="newEmployeeData1.salary" required>
+
+  </div>
+<Br><Br>
+  <button type="submit" class="btn btn-primary col-md-2 ">Save</button>
+  <button type="submit" class="btn btn-danger col-md-2  " [routerLink]="['/list']">Cancel</button>
+
+</form>
